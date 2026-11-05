@@ -95,8 +95,9 @@ body {font-size: 18px;line-height: 1.4;}h1, .elementor-widget-heading h1.element
 <link rel="apple-touch-icon" href="/wp-content/uploads/cropped-favicon-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/cropped-favicon-270x270.png" />
 <style id="mellow_theme_mod-dynamic-css" title="dynamic-css" class="redux-options-output">body{font-family:"Mona Sans";text-transform:none;font-weight:400;font-style:normal;}h1, .elementor-widget-heading h1.elementor-heading-title{font-family:"Mona Sans";text-transform:none;font-weight:700;font-style:normal;}h2, .elementor-widget-heading h2.elementor-heading-title{font-family:"Mona Sans";text-transform:none;font-weight:700;font-style:normal;}h3, .elementor-widget-heading h3.elementor-heading-title{font-family:"Mona Sans";font-weight:500;font-style:normal;}h4, .elementor-widget-heading h4.elementor-heading-title{font-family:"Mona Sans";font-weight:500;font-style:normal;}h5, .elementor-widget-heading h5.elementor-heading-title{font-family:"Mona Sans";font-weight:500;font-style:normal;}h6, .elementor-widget-heading h6.elementor-heading-title{font-family:"Mona Sans";font-weight:700;font-style:normal;}.main-navigation .sf-menu li a{line-height:14px;font-size:14px;}.main-navigation .sf-menu li li a{line-height:14px;font-size:14px;}.dtr-header-btn{line-height:20px;font-size:14px;}.dtr-breadcrumb-wrapper{margin-top:20px;}.dtr-page-title{text-transform:uppercase;}#dtr-footer-section{border-top:1px solid #111111;}.dtr-footer-section-wrap h6{font-family:"Mona Sans";text-transform:uppercase;line-height:14px;font-weight:500;font-style:normal;font-size:14px;}.dtr-archive-post-title, .dtr-archive-post-title a{font-family:"Mona Sans";text-transform:none;line-height:36px;font-weight:500;font-style:normal;font-size:30px;}.dtr-entry-meta, .wp-block-latest-posts__post-author, .wp-block-latest-posts__post-date{line-height:30px;}.dtr-entry-meta .dtr-meta-category a{text-transform:uppercase;line-height:14px;}.dtr-single-post-title.dtr-page-title{text-transform:uppercase;line-height:80px;font-size:70px;}.dtr-single-meta{line-height:30px;}.dtr-single-meta .dtr-meta-category a{text-transform:uppercase;line-height:14px;}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" />
 <style id="fawas-content">
-.fawas-wordmark{display:inline-block;font-weight:700;font-size:22px;letter-spacing:-.04em;color:#fff;line-height:1;text-decoration:none}
+.fawas-wordmark{display:inline-block;font-family:"Syne",system-ui,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.03em;color:#fff;line-height:1;text-decoration:none}
 a.dtr-logo{text-decoration:none}
 img[src*="me-2.jpg"]{visibility:hidden}
 .dtr-feature-highlight__icon:has(img[src*="me-2.jpg"]){position:relative;background:#1a1a1a;border-radius:50%}
@@ -170,24 +171,24 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
 .km-btn-ghost{background:transparent;border:1px solid #333}
 .km-ctas{display:flex;flex-wrap:wrap;gap:12px}
 .km-wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-.ab-hero{max-width:1080px;margin:0 auto;padding:132px 28px 56px}
-.ab-kicker{margin:0 0 18px;color:#8a8a8a;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-.ab-kicker:before{content:"";display:inline-block;width:22px;height:1px;background:#555;margin-right:10px;vertical-align:middle}
-.ab-hero h1{margin:0 0 36px;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:.98;letter-spacing:-.05em;font-weight:750;color:#fff;max-width:18ch}
-.ab-hero-row{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
-.ab-hero-photo{margin:0;border-radius:24px;overflow:hidden;background:#151515;border:1px solid #222}
+.ab-intro{max-width:1180px;margin:0 auto;padding:120px 40px 56px;display:grid;grid-template-columns:320px minmax(0,1fr);gap:48px 64px;align-items:start}
+.ab-hero-photo{margin:0;grid-row:1 / span 2;width:100%;max-width:320px;border-radius:24px;overflow:hidden;background:#151515;border:1px solid #222;position:sticky;top:96px}
 .ab-hero-photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 8%;display:block}
-.ab-hero .ab-copy{padding-bottom:6px}
-.ab-hero p{margin:0 0 16px;color:#b8b8b8;font-size:1.05rem;line-height:1.7}
-.ab-hero p:last-child{margin:0}
-.ab-hero strong{color:#fff;font-weight:650}
+.ab-kicker{margin:0 0 16px;color:#8a8a8a;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.ab-kicker:before{content:"";display:inline-block;width:22px;height:1px;background:#555;margin-right:10px;vertical-align:middle}
+.ab-copy h1{margin:0 0 20px;font-size:clamp(2.05rem,2.6vw,3rem);line-height:1.08;letter-spacing:-.045em;font-weight:750;color:#fff;max-width:none}
+.ab-copy .ab-lead{margin:0 0 22px;color:#fff;font-size:1.08rem;line-height:1.6}
+.ab-copy p,.ab-prose p{margin:0 0 18px;color:#b8b8b8;font-size:1.05rem;line-height:1.75}
+.ab-copy p:last-child,.ab-prose p:last-child{margin:0}
+.ab-copy strong,.ab-prose strong{color:#fff;font-weight:650}
+.ab-prose{padding-bottom:8px}
 .ab-strip{border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;background:#0f0f0f}
-.ab-stats{max-width:1080px;margin:0 auto;padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.ab-stats{max-width:1180px;margin:0 auto;padding:28px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
 .ab-stat{padding:8px 28px 8px 0}
 .ab-stat + .ab-stat{border-left:1px solid #222;padding-left:36px}
 .ab-stat b{display:block;font-size:2.1rem;letter-spacing:-.04em;color:#fff;line-height:1.1}
 .ab-stat span{display:block;margin-top:6px;color:#8a8a8a;font-size:13px}
-.ab-block{max-width:1080px;margin:0 auto;padding:72px 28px 8px}
+.ab-block{max-width:1180px;margin:0 auto;padding:72px 40px 8px}
 .ab-block h2{margin:0 0 28px;font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.04em;color:#fff}
 .ab-focus{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #222}
 .ab-focus article{padding:28px 22px 28px 0;border-bottom:1px solid #222}
@@ -200,14 +201,15 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
 .ab-job h3{margin:0;color:#fff;font-size:1.12rem;font-weight:600}
 .ab-job .org{color:#cfcfcf;font-size:1rem}
 .ab-job .meta{color:#8a8a8a;font-size:14px;text-align:right}
-.ab-cta{max-width:1080px;margin:56px auto 96px;padding:40px 36px;border:1px solid #222;border-radius:24px;background:#121212;display:flex;justify-content:space-between;align-items:center;gap:28px}
+.ab-cta{max-width:1180px;margin:56px auto 96px;padding:40px 36px;border:1px solid #222;border-radius:24px;background:#121212;display:flex;justify-content:space-between;align-items:center;gap:28px}
 .ab-cta h2{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;letter-spacing:-.04em}
 .ab-cta p{margin:0;color:#b3b3b3;max-width:420px}
-@media (max-width:900px){
-  .ab-hero,.ab-hero-row,.ab-focus,.ab-job,.ab-cta,.ab-stats{grid-template-columns:1fr;display:flex;flex-direction:column}
-  .ab-hero{padding-top:112px;gap:28px}
-  .ab-hero h1{margin-bottom:24px}
-  .ab-hero-photo{max-width:420px}
+@media (max-width:980px){
+  .ab-intro,.ab-focus,.ab-job,.ab-cta,.ab-stats{grid-template-columns:1fr;display:flex;flex-direction:column}
+  .ab-intro{padding:112px 24px 40px;gap:28px}
+  .ab-hero-photo{grid-row:auto;position:static;max-width:360px}
+  .ab-copy h1{max-width:none}
+  .ab-block,.ab-stats,.ab-cta{padding-left:24px;padding-right:24px}
   .ab-stat + .ab-stat{border-left:0;padding-left:0;padding-top:18px;border-top:1px solid #222;margin-top:18px}
   .ab-focus article:not(:nth-child(4n+1)){border-left:0;padding-left:0}
   .ab-job .meta{text-align:left}
@@ -256,17 +258,21 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
             
 <article id="post-about" class="page type-page">
 <div class="entry-content km">
-  <section class="ab-hero">
-    <p class="ab-kicker">About</p>
-    <h1>From Kerala to Dubai, helping brands grow through SEO.</h1>
-    <div class="ab-hero-row">
-      <figure class="ab-hero-photo">
-        <img src="/wp-content/uploads/fawas-about-pro.jpg" alt="Muhammed Fawas">
-      </figure>
-      <div class="ab-copy">
-        <p>I'm <strong>Muhammed Fawas</strong>, an SEO Specialist with 2.5+ years driving organic growth for businesses across India and the UAE.</p>
-        <p>Technical SEO, on-page and off-page, local SEO, AEO, GEO, AI search, and WordPress development — aimed at rankings, qualified traffic, and measurable growth.</p>
-      </div>
+  <section class="ab-intro">
+    <figure class="ab-hero-photo">
+      <img src="/wp-content/uploads/fawas-about-pro.jpg" alt="Muhammed Fawas">
+    </figure>
+    <div class="ab-copy">
+      <p class="ab-kicker">About</p>
+      <h1>Meet Muhammed Fawas, a Dubai-Based SEO Specialist.</h1>
+      <p class="ab-lead"><strong>Muhammed Fawas</strong> — SEO Specialist, Digital Marketer, Technical SEO Practitioner, Local SEO Strategist, and AI Search Optimization Specialist.</p>
+      <p>Originally from Kerala and currently based in Dubai, Muhammed Fawas has 2.5+ years of experience in SEO and digital marketing, helping businesses across India and the UAE improve their online visibility, attract qualified organic traffic, and achieve measurable business growth.</p>
+      <p>His approach to SEO goes beyond traditional keyword rankings. He focuses on building sustainable organic growth through technical excellence, strategic content optimization, search intent, and data-driven decision-making.</p>
+    </div>
+    <div class="ab-prose">
+      <p>With hands-on experience across multiple industries, including e-commerce, healthcare, travel and tourism, consulting, and local businesses, he develops SEO strategies aligned with business objectives and long-term search performance.</p>
+      <p>His expertise covers Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Keyword Research, Content Strategy, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and AI Search Optimization. He also works with WordPress website development and optimization to build search-friendly digital experiences.</p>
+      <p>As search continues to evolve with AI-powered platforms and generative search experiences, Muhammed focuses on helping businesses adapt their digital presence for both traditional search engines and emerging AI-driven discovery platforms.</p>
     </div>
   </section>
   <div class="ab-strip">
