@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0b;
+  --surface: #111114;
+  --text: #ededed;
+  --muted: #8a8a93;
+  --accent: #7c5cff;
+  --line: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  --color-bg: var(--background);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  background: #0a0a0b;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0b;
+  color: #ededed;
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+#content {
+  scroll-margin-top: 5rem;
+}
+
+#content:focus {
+  outline: none;
+}
+
+::selection {
+  background: #7c5cff;
+  color: #0a0a0b;
+}
+
+:focus-visible {
+  outline: 2px solid #7c5cff;
+  outline-offset: 3px;
+}
+
+.link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.4s ease;
+}
+
+.link-sweep:hover,
+.link-sweep:focus-visible {
+  background-size: 100% 1px;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+.map-dark {
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.12) brightness(0.8) contrast(1.1);
+}
+
+@media (scripting: none) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .pulse-dot {
+    animation: none;
+  }
+
+  .link-sweep {
+    transition: none;
+  }
+}

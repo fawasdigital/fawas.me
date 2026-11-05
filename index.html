@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammed Fawas — Digital Marketer & SEO Specialist</title>
+  <meta name="description" content="Portfolio of Muhammed Fawas — Digital Marketer and SEO Specialist helping businesses grow online through SEO, digital strategy, and web development." />
+  <style>
+    @font-face {
+      font-family: "Inter Tight";
+      src: url("fonts/InterTight-wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --u: min(100vw / 1440, 100vh / 960);
+      --ink: #0D0D0C;
+      --cream: #FBF6EF;
+      --muted: rgb(13 13 12 / 56%);
+      --hint: rgb(13 13 12 / 42%);
+      --font: "Inter Tight", "Inter", sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body { overflow: hidden; }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; }
+
+    .frame {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 75%;
+      overflow: hidden;
+      color: var(--ink);
+    }
+
+    .layers, .layer, .grain {
+      position: absolute;
+      inset: 0;
+    }
+
+    .layer {
+      opacity: 0;
+      background:
+        radial-gradient(ellipse 58% 50% at 86% 76%, var(--glow), transparent 68%),
+        radial-gradient(ellipse 46% 40% at 32% 105%, var(--glow-soft), transparent 70%),
+        linear-gradient(180deg, var(--base-a), var(--base-b));
+      transform: scale(1.08);
+      will-change: transform, opacity;
+    }
+
+    .grain {
+      opacity: 0.18;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .nav {
+      position: relative;
+      z-index: 3;
+      height: calc(80 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 calc(28 * var(--u)) 0 calc(32 * var(--u));
+      border-bottom: 1px solid rgb(13 13 12 / 14%);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: calc(10 * var(--u));
+      font-weight: 600;
+      font-size: calc(25 * var(--u));
+      letter-spacing: -0.03em;
+    }
+
+    .brand-dot {
+      width: calc(13 * var(--u));
+      height: calc(13 * var(--u));
+      border-radius: 50%;
+      background: #000;
+      flex: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: calc(42 * var(--u));
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: calc(6 * var(--u));
+      font-size: calc(16 * var(--u));
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-link svg {
+      width: calc(17 * var(--u));
+      height: calc(17 * var(--u));
+    }
+
+    .join {
+      height: calc(48 * var(--u));
+      padding: 0 calc(18 * var(--u));
+      border-radius: calc(7 * var(--u));
+      border: 1.4px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      font-size: calc(15.5 * var(--u));
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .join:hover { background: #000; color: #fff; }
+
+    .headline {
+      position: absolute;
+      z-index: 2;
+      left: calc(112 * var(--u));
+      top: calc(168 * var(--u));
+      right: calc(48 * var(--u));
+      font-size: calc(148 * var(--u));
+      line-height: 0.86;
+      letter-spacing: -0.032em;
+      font-weight: 500;
+    }
+
+    .line { display: block; white-space: nowrap; }
+    .line1 { position: relative; height: 0.86em; }
+
+    .slot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.04em;
+      white-space: nowrap;
+      opacity: 0;
+      will-change: transform, opacity, filter;
+    }
+
+    .icon-wrap {
+      width: 1.02em;
+      height: 1.02em;
+      position: relative;
+      isolation: isolate;
+      flex: none;
+      will-change: transform;
+    }
+
+    .icon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: grayscale(1) brightness(1.1) contrast(1.08);
+    }
+
+    .icon-tint {
+      position: absolute;
+      inset: 0;
+      background: var(--tint);
+      mix-blend-mode: color;
+      -webkit-mask: var(--mask) center / contain no-repeat;
+      mask: var(--mask) center / contain no-repeat;
+      pointer-events: none;
+    }
+
+    .row {
+      position: absolute;
+      z-index: 2;
+      left: calc(112 * var(--u));
+      right: calc(72 * var(--u));
+      top: calc(578 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(28 * var(--u));
+    }
+
+    .stores { display: flex; gap: calc(12 * var(--u)); }
+
+    .store {
+      height: calc(58 * var(--u));
+      padding: 0 calc(18 * var(--u));
+      border-radius: calc(10 * var(--u));
+      border: 1.4px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: calc(10 * var(--u));
+      font-size: calc(16 * var(--u));
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+    }
+
+    .store svg { width: calc(18 * var(--u)); height: calc(18 * var(--u)); flex: none; }
+    .store.on { background: #000; color: #fff; border-color: #000; }
+
+    .caption {
+      font-size: calc(18.5 * var(--u));
+      line-height: 1.28;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: -0.015em;
+      max-width: calc(520 * var(--u));
+    }
+
+    .strip {
+      position: relative;
+      height: 25%;
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    .notch {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: calc(62 * var(--u));
+      top: 0;
+      transform: translateY(-100%);
+      display: block;
+      pointer-events: none;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      z-index: 2;
+      right: calc(48 * var(--u));
+      top: calc(-46 * var(--u));
+      font-size: calc(15 * var(--u));
+      font-weight: 400;
+      color: var(--hint);
+      letter-spacing: -0.01em;
+    }
+
+    .strip-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: calc(48 * var(--u));
+      padding: 0 calc(64 * var(--u)) 0 calc(112 * var(--u));
+    }
+
+    .phrase {
+      font-size: calc(29 * var(--u));
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      flex: none;
+    }
+
+    .stats {
+      display: flex;
+      align-items: flex-end;
+      gap: calc(48 * var(--u));
+      flex: 1;
+    }
+
+    .stat-num {
+      font-size: calc(54 * var(--u));
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+    }
+
+    .stat-label {
+      margin-top: calc(8 * var(--u));
+      font-size: calc(16.5 * var(--u));
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .sprout {
+      margin-left: auto;
+      width: calc(54 * var(--u));
+      height: calc(64 * var(--u));
+      flex: none;
+    }
+
+    @media (max-width: 760px) {
+      body { overflow: auto; }
+      .frame { height: auto; min-height: 100vh; overflow: visible; }
+      .hero { height: auto; min-height: 78vh; display: flex; flex-direction: column; }
+      .nav { height: 64px; padding: 0 16px; }
+      .brand { font-size: 20px; gap: 8px; }
+      .brand-dot { width: 10px; height: 10px; }
+      .nav-right { gap: 14px; }
+      .nav-link { font-size: 13px; }
+      .nav-link svg { width: 12px; height: 12px; }
+      .join { height: 36px; padding: 0 12px; font-size: 13px; border-radius: 7px; }
+      .headline {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        font-size: clamp(52px, 15.5vw, 88px);
+        padding: 36px 20px 0;
+      }
+      .line, .line2 { white-space: normal; }
+      .row {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        flex-wrap: wrap;
+        padding: 28px 20px 36px;
+        gap: 16px;
+      }
+      .stores { flex-wrap: wrap; }
+      .store { height: 48px; font-size: 15px; padding: 0 14px; }
+      .store svg { width: 16px; height: 16px; }
+      .caption { font-size: 15px; max-width: none; flex-basis: 100%; }
+      .strip { height: auto; }
+      .notch { height: 36px; }
+      .scroll-hint { font-size: 13px; right: 16px; top: -28px; }
+      .strip-inner {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 22px 12px;
+        padding: 28px 20px 36px;
+      }
+      .phrase { font-size: 24px; width: 100%; }
+      .stats {
+        width: calc(100% - 70px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 16px;
+        align-items: start;
+      }
+      .stat-num { font-size: 36px; }
+      .stat-label { font-size: 14px; }
+      .sprout { width: 46px; height: 56px; margin-left: auto; align-self: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .layer { opacity: 0 !important; transform: none !important; }
+      .layer[data-i="1"] { opacity: 1 !important; }
+      .slot { opacity: 0 !important; filter: none !important; transform: none !important; }
+      .slot[data-i="1"] { opacity: 1 !important; }
+      .icon-wrap { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <section class="hero">
+      <div class="layers" id="layers">
+        <div class="layer" data-i="0" style="--base-a:#F2ECDF;--base-b:#F4EBC6;--glow:rgb(246,222,104);--glow-soft:rgb(246 222 104 / 55%)"></div>
+        <div class="layer" data-i="1" style="--base-a:#F8DCC7;--base-b:#F9CBA9;--glow:rgb(249,150,84);--glow-soft:rgb(249 150 84 / 50%)"></div>
+        <div class="layer" data-i="2" style="--base-a:#E9EBE0;--base-b:#DFE9D4;--glow:rgb(150,206,150);--glow-soft:rgb(150 206 150 / 55%)"></div>
+        <div class="layer" data-i="3" style="--base-a:#F0E4E6;--base-b:#ECD6E2;--glow:rgb(222,150,200);--glow-soft:rgb(222 150 200 / 50%)"></div>
+      </div>
+      <svg class="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <filter id="grain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain)"/>
+      </svg>
+
+      <header class="nav">
+        <a class="brand" href="index.html"><span class="brand-dot"></span>fawas</a>
+        <div class="nav-right">
+          <a class="nav-link" href="work.html">Work
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </a>
+          <a class="nav-link" href="about.html">About
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </a>
+          <a class="nav-link" href="connect.html">Connect
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </a>
+          <a class="join" href="connect.html">Say hello</a>
+        </div>
+      </header>
+
+      <h1 class="headline">
+        <span class="line line1" id="slots">
+          <span class="slot" data-i="0">
+            <span class="icon-wrap" style="--tint:#E9C22E;--mask:url(https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/83de7c35-dd91-4e56-bfb8-0ffafc83d0e0.webp)">
+              <img alt="" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/83de7c35-dd91-4e56-bfb8-0ffafc83d0e0.webp" />
+              <span class="icon-tint"></span>
+            </span>
+            <span class="word">SEO</span>
+          </span>
+          <span class="slot" data-i="1">
+            <span class="icon-wrap" style="--tint:#F2772F;--mask:url(https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/4d952211-0474-48cc-af48-58f68b3b7525.webp)">
+              <img alt="" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/4d952211-0474-48cc-af48-58f68b3b7525.webp" />
+              <span class="icon-tint"></span>
+            </span>
+            <span class="word">Grow</span>
+          </span>
+          <span class="slot" data-i="2">
+            <span class="icon-wrap" style="--tint:#3FB874;--mask:url(https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e2e91fca-5b3f-4e0e-a437-8a581592e407.webp)">
+              <img alt="" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e2e91fca-5b3f-4e0e-a437-8a581592e407.webp" />
+              <span class="icon-tint"></span>
+            </span>
+            <span class="word">Rank</span>
+          </span>
+          <span class="slot" data-i="3">
+            <span class="icon-wrap" style="--tint:#C564C4;--mask:url(https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/6b32bb47-4ad6-4938-a637-c997b373c68b.webp)">
+              <img alt="" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/6b32bb47-4ad6-4938-a637-c997b373c68b.webp" />
+              <span class="icon-tint"></span>
+            </span>
+            <span class="word">Build</span>
+          </span>
+        </span>
+        <span class="line line2">Muhammed Fawas</span>
+      </h1>
+
+      <div class="row">
+        <div class="stores">
+          <a class="store" id="workBtn" href="work.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+            Work
+          </a>
+          <a class="store" href="connect.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h12"/><path d="M13 6l6 6-6 6"/></svg>
+            Connect
+          </a>
+        </div>
+        <p class="caption">I'm a Digital Marketer and SEO Specialist helping businesses grow through SEO, digital strategy, and web development.</p>
+      </div>
+    </section>
+
+    <section class="strip">
+      <svg class="notch" viewBox="0 0 1440 62" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="#FBF6EF" d="M0 62 H1062 C1092 62 1098 54 1116 34 C1138 9 1146 1 1178 1 H1440 V62 Z"/>
+      </svg>
+      <a class="scroll-hint" href="work.html">↓ Scroll to learn more</a>
+      <div class="strip-inner">
+        <p class="phrase">Build. Rank.<br />Grow. Repeat.</p>
+        <div class="stats">
+          <div>
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Brands worked with</div>
+          </div>
+          <div>
+            <div class="stat-num">4</div>
+            <div class="stat-label">Roles so far</div>
+          </div>
+          <div>
+            <div class="stat-num">2024</div>
+            <div class="stat-label">Practising since</div>
+          </div>
+        </div>
+        <svg class="sprout" viewBox="0 0 54 64" fill="none" stroke="#0D0D0C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M27 58 V28"/>
+          <path d="M27 40 C18 38 12 30 14 20 C22 22 27 30 27 40"/>
+          <path d="M27 34 C36 30 44 22 42 12 C34 14 28 24 27 34"/>
+          <path d="M16 58 H38"/>
+        </svg>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) return;
+
+      var SLOT = 1750;
+      var CYCLE = SLOT * 4;
+      var slots = Array.prototype.slice.call(document.querySelectorAll(".slot"));
+      var layers = Array.prototype.slice.call(document.querySelectorAll(".layer"));
+      var wraps = slots.map(function (slot) { return slot.querySelector(".icon-wrap"); });
+      var workBtn = document.getElementById("workBtn");
+
+      var clock = document.documentElement.animate(
+        [{ opacity: 1 }, { opacity: 1 }],
+        { duration: CYCLE, iterations: Infinity }
+      );
+
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function easeIn(t) { return t * t * t; }
+      function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function layerOpacity(i, t) {
+        var center = i * SLOT + SLOT / 2;
+        var d = Math.abs(t - center);
+        d = Math.min(d, CYCLE - d);
+        var full = SLOT / 2 - 385;
+        if (d <= full) return 1;
+        if (d >= full + 770) return 0;
+        return 1 - (d - full) / 770;
+      }
+
+      function slotMotion(local) {
+        var opacity = 0, y = 0.32, blur = 0, scale = 0.96, iScale = 0.7, iRot = -14;
+        if (local < 0 || local >= SLOT) {
+          return { opacity: 0, y: 0, blur: 0, scale: 1, iScale: 1, iRot: 0 };
+        }
+        if (local < 500) {
+          var e = easeOut(local / 500);
+          opacity = e;
+          y = lerp(0.32, 0, e);
+          blur = lerp(10, 0, e);
+          scale = lerp(0.96, 1, e);
+          var ie = easeOut(clamp((local - 60) / 500, 0, 1));
+          iScale = lerp(0.7, 1, ie);
+          iRot = lerp(-14, 0, ie);
+        } else if (local < SLOT - 420) {
+          opacity = 1;
+          y = 0;
+          blur = 0;
+          scale = 1;
+          iScale = 1;
+          iRot = 0;
+        } else {
+          var l = easeIn((local - (SLOT - 420)) / 420);
+          opacity = 1 - l;
+          y = lerp(0, -0.16, l);
+          blur = lerp(0, 8, l);
+          scale = 1;
+          iScale = 1;
+          iRot = 0;
+        }
+        return { opacity: opacity, y: y, blur: blur, scale: scale, iScale: iScale, iRot: iRot };
+      }
+
+      function frame() {
+        var t = clock.currentTime % CYCLE;
+        var sec = t / 1000;
+        layers.forEach(function (layer, i) {
+          var ox = Math.sin(sec * 0.35 + i) * 2.2;
+          var oy = Math.cos(sec * 0.27 + i * 0.8) * 1.6;
+          layer.style.opacity = String(layerOpacity(i, t));
+          layer.style.transform = "translate(" + ox + "%, " + oy + "%) scale(1.08)";
+        });
+        slots.forEach(function (slot, i) {
+          var local = (t - i * SLOT + CYCLE) % CYCLE;
+          var m = slotMotion(local);
+          var bob = Math.sin(sec * 1.7 + i) * 0.028;
+          var twist = Math.sin(sec * 1.25 + i * 0.6) * 3;
+          slot.style.opacity = String(m.opacity);
+          slot.style.filter = "blur(" + m.blur + "px)";
+          slot.style.transform = "translateY(" + m.y + "em) scale(" + m.scale + ")";
+          wraps[i].style.transform =
+            "translateY(" + bob + "em) rotate(" + (m.iRot + twist) + "deg) scale(" + m.iScale + ")";
+        });
+        var buildLocal = (t - 3 * SLOT + CYCLE) % CYCLE;
+        workBtn.classList.toggle("on", buildLocal >= 500 && buildLocal < SLOT - 420);
+        requestAnimationFrame(frame);
+      }
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) clock.pause();
+        else clock.play();
+      });
+
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

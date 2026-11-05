@@ -1,0 +1,5 @@
+.admin-bar #dtr-header-global, .admin-bar #dtr-header-global.fixed-top.header-fixed { margin-top: 32px }
+.admin-bar #dtr-header-global.no-fixed-top { margin-top: 0 }
+.dtr-page-title--section { padding: 150px 0 50px 0; }
+#dtr-header-global .logo-default, #dtr-header-global.header-fixed .logo-alt { display: flex !important; }
+#dtr-header-global .logo-alt, #dtr-header-global.header-fixed .logo-default { display: none !important; }

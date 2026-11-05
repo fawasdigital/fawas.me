@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /blog/
+Disallow: /portfolio/
+Disallow: /tag/
+Disallow: /category/
+Disallow: /author/
