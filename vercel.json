@@ -4,5 +4,25 @@
   "installCommand": "echo skip",
   "buildCommand": "echo skip",
   "outputDirectory": "static-mirror/dist",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "fawasme-git-main-fawasdigitals-projects.vercel.app" }],
+      "destination": "https://fawas.me/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "fawasme.vercel.app" }],
+      "destination": "https://fawas.me/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "fawasme-fawasdigitals-projects.vercel.app" }],
+      "destination": "https://fawas.me/:path*",
+      "permanent": true
+    }
+  ]
 }
