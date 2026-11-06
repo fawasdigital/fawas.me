@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /blog/
-Disallow: /portfolio/
 Disallow: /tag/
 Disallow: /category/
 Disallow: /author/
+
+Sitemap: https://fawas.me/sitemap.xml
