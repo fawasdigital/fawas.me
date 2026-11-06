@@ -225,24 +225,54 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
 }
 .dtr-header-global-content{
   max-width:none!important;width:100%!important;margin:0!important;padding:0!important;
-  display:flex!important;align-items:center;justify-content:space-between;flex-wrap:nowrap!important;box-sizing:border-box
+  display:flex!important;align-items:center;justify-content:space-between;flex-wrap:nowrap!important;box-sizing:border-box;position:relative
 }
 #dtr-header-global .logo-default,#dtr-header-global.header-fixed .logo-default{display:flex!important}
 #dtr-header-global .logo-alt,#dtr-header-global.header-fixed .logo-alt{display:none!important}
 .dtr-header-left{flex:0 0 auto}
 .dtr-header-right,.main-navigation,.main-navigation .sf-menu,.sf-menu.dtr-main-nav{display:flex!important;align-items:center;float:none!important}
 .dtr-header-right{margin-left:auto}
-#dtr-responsive-header,#dtr-menu-button,.slicknav_menu{display:none!important}
+#dtr-responsive-header,#dtr-responsive-header *{display:none!important}
+.slicknav_menu,#dtr-menu-button{display:none!important}
 .sf-menu.dtr-main-nav{gap:2px;margin:0!important;padding:0;list-style:none}
 .sf-menu.dtr-main-nav>li{float:none!important}
 .sf-menu.dtr-main-nav>li>a{letter-spacing:.08em;text-transform:uppercase;font-size:12px!important;font-weight:600;color:#fff!important;padding:10px 14px!important;text-decoration:none;line-height:14px}
 .sf-menu.dtr-main-nav>li.current-menu-item>a{opacity:.55}
 #dtr-header-global .fawas-wordmark{font-family:"Syne",system-ui,sans-serif;font-weight:800;font-size:28px;letter-spacing:-.04em;color:#fff}
+.fawas-menu-toggle{display:none}
 .fawas-case{padding-top:120px}
-@media (max-width:720px){
-  #dtr-header-global{display:none!important}
-  #dtr-responsive-header,#dtr-menu-button{display:block!important}
-  #dtr-header-global{padding:16px 20px!important}
+@media (max-width:860px){
+  #dtr-header-global,#dtr-header-global.fixed-top,#dtr-header-global.header-fixed{padding:12px 18px!important}
+  #dtr-header-global .fawas-wordmark{font-size:26px}
+  .fawas-menu-toggle{
+    display:inline-flex!important;align-items:center;justify-content:center;width:44px;height:44px;margin-left:12px;
+    padding:0;border:0;background:transparent;color:#fff;cursor:pointer;flex:0 0 auto;z-index:1001
+  }
+  .fawas-menu-toggle{overflow:visible}
+  .fawas-menu-toggle span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;position:relative}
+  .fawas-menu-toggle span:before,.fawas-menu-toggle span:after{
+    content:"";position:absolute;left:0;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .2s ease,top .2s ease
+  }
+  .fawas-menu-toggle span:before{top:-6px}
+  .fawas-menu-toggle span:after{top:6px}
+  body.fawas-nav-open .fawas-menu-toggle span{background:transparent}
+  body.fawas-nav-open .fawas-menu-toggle span:before{top:0;transform:rotate(45deg)}
+  body.fawas-nav-open .fawas-menu-toggle span:after{top:0;transform:rotate(-45deg)}
+  body.fawas-nav-open .dtr-header-right{z-index:1002;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .dtr-header-right,.main-navigation,.main-navigation .sf-menu,.sf-menu.dtr-main-nav{display:none!important}
+  body.fawas-nav-open .dtr-header-right{
+    display:flex!important;position:absolute;top:calc(100% + 12px);left:-18px;right:-18px;margin:0;
+    flex-direction:column;align-items:stretch;background:#0b0b0b;border-top:1px solid #222;padding:8px 18px 18px
+  }
+  body.fawas-nav-open .main-navigation,
+  body.fawas-nav-open .main-navigation .sf-menu,
+  body.fawas-nav-open .sf-menu.dtr-main-nav{
+    display:flex!important;flex-direction:column;align-items:stretch;width:100%;gap:0
+  }
+  body.fawas-nav-open .sf-menu.dtr-main-nav>li>a{
+    display:block;width:100%;text-align:left;padding:14px 4px!important;font-size:14px!important;line-height:1.2;border-bottom:1px solid #1c1c1c
+  }
+  body.fawas-nav-open .sf-menu.dtr-main-nav>li:last-child>a{border-bottom:0}
 }
 </style>
 </head>
@@ -260,6 +290,7 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
                     <ul id="menu-primary-menu" class="dtr-nav sf-menu dtr-main-nav"><li class="menu-item"><a href="/">Home</a></li><li class="menu-item current-menu-item"><a href="/about/">About</a></li><li class="menu-item"><a href="/portfolio/">Portfolio</a></li><li class="menu-item"><a href="/contact/">Contact</a></li></ul>                </div>
                     </div>
 
+            <button type="button" class="fawas-menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
             </div>
 </div>
 <div id="dtr-responsive-header">
@@ -485,6 +516,21 @@ document.querySelectorAll("form.wpcf7-form").forEach(function (form) {
   <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#111111" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </a>
 
+<script id="fawas-nav-js">
+(function(){
+  var btn=document.querySelector(".fawas-menu-toggle");
+  if(!btn) return;
+  function setOpen(open){
+    document.body.classList.toggle("fawas-nav-open", open);
+    btn.setAttribute("aria-expanded", open?"true":"false");
+    btn.setAttribute("aria-label", open?"Close menu":"Open menu");
+  }
+  btn.addEventListener("click", function(){ setOpen(!document.body.classList.contains("fawas-nav-open")); });
+  document.querySelectorAll("#dtr-header-global .sf-menu a").forEach(function(a){
+    a.addEventListener("click", function(){ setOpen(false); });
+  });
+})();
+</script>
 </body>
 
 </html>
