@@ -175,7 +175,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km a.km-btn-ghost,.km-btn-ghost{color:#fff!important}
 .km em{font-style:italic;font-weight:600;color:#fff}
 .km-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.km-hero{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center;padding:128px 28px 56px;max-width:1180px;margin:0 auto}
+.km-hero{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center;padding:128px 40px 56px;max-width:1180px;margin:0 auto}
 .km-hero h1{margin:0 0 22px;font-size:clamp(2.4rem,5.6vw,4.2rem);line-height:.98;letter-spacing:-.045em;font-weight:750;color:#fff}
 .km-hero p{margin:0 0 28px;max-width:540px;font-size:1.08rem;line-height:1.6;color:#bdbdbd}
 .km-hero p strong{color:#fff}
@@ -190,12 +190,13 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-visual-card picture{display:block;width:100%;height:auto;min-height:0}
 .km-visual-card img{width:100%;height:auto;min-height:0;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;display:block}
 .km-badge{position:absolute;top:18px;right:18px;z-index:2;background:#111;color:#fff;border:1px solid #333;border-radius:999px;padding:8px 14px;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
-.km-ticker{display:flex;align-items:center;gap:0;background:#0f0f0f;border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;padding:0 0 0 32px;overflow:hidden;min-height:78px}
-.km-ticker-label{position:relative;z-index:2;flex:0 0 auto;color:#7a7a7a;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:22px 28px 22px 0;background:#0f0f0f;box-shadow:18px 0 24px 10px #0f0f0f}
-.km-ticker-mask{flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 72px),transparent);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 72px),transparent)}
+.km-ticker-shell{max-width:1180px;margin:8px auto 0;padding:0 28px;box-sizing:border-box}
+.km-ticker{display:flex;align-items:center;gap:0;background:#0f0f0f;border:1px solid #1c1c1c;border-radius:16px;padding:0 20px 0 24px;overflow:hidden;min-height:72px;width:100%;box-sizing:border-box}
+.km-ticker-label{position:relative;z-index:2;flex:0 0 auto;color:#7a7a7a;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:18px 22px 18px 0;background:#0f0f0f;box-shadow:18px 0 24px 10px #0f0f0f}
+.km-ticker-mask{flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent)}
 .km-ticker-track{display:flex;align-items:center;width:max-content;gap:44px;padding:18px 0;animation:kmscroll 36s linear infinite}
 .km-ticker:hover .km-ticker-track{animation-play-state:paused}
-.km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.92}
+.km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.95;filter:brightness(0) invert(1)}
 .km-ticker-track .km-word{flex:0 0 auto;color:#fff;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
 @keyframes kmscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .km-section{max-width:1180px;margin:0 auto;padding:88px 28px}
@@ -246,6 +247,8 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
   .km-hero,.km-about,.km-services,.km-work{grid-template-columns:1fr}
   .km-visual{max-width:280px;margin:8px auto 0}
   .km-svc-cta{min-height:220px}
+  .km-ticker-shell{padding:0 20px}
+  .km-ticker-label{max-width:92px;line-height:1.35}
 }
 </style>
 <style id="fawas-foot">
@@ -274,6 +277,35 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .fawas-wa:hover{transform:scale(1.06);color:#111!important}
 #take-to-top{right:22px;bottom:90px}
 </style>
+
+<style id="fawas-nav-vis">
+.dtr-page-title--section{display:none!important}
+#dtr-header-global,#dtr-header-global.fixed-top,#dtr-header-global.header-fixed{
+  display:block!important;background:#0b0b0b!important;border:0!important;box-shadow:none!important;
+  padding:18px 50px!important;position:fixed!important;top:0;left:0;right:0;width:100%;z-index:1000;box-sizing:border-box
+}
+.dtr-header-global-content{
+  max-width:none!important;width:100%!important;margin:0!important;padding:0!important;
+  display:flex!important;align-items:center;justify-content:space-between;flex-wrap:nowrap!important;box-sizing:border-box
+}
+#dtr-header-global .logo-default,#dtr-header-global.header-fixed .logo-default{display:flex!important}
+#dtr-header-global .logo-alt,#dtr-header-global.header-fixed .logo-alt{display:none!important}
+.dtr-header-left{flex:0 0 auto}
+.dtr-header-right,.main-navigation,.main-navigation .sf-menu,.sf-menu.dtr-main-nav{display:flex!important;align-items:center;float:none!important}
+.dtr-header-right{margin-left:auto}
+#dtr-responsive-header,#dtr-menu-button,.slicknav_menu{display:none!important}
+.sf-menu.dtr-main-nav{gap:2px;margin:0!important;padding:0;list-style:none}
+.sf-menu.dtr-main-nav>li{float:none!important}
+.sf-menu.dtr-main-nav>li>a{letter-spacing:.08em;text-transform:uppercase;font-size:12px!important;font-weight:600;color:#fff!important;padding:10px 14px!important;text-decoration:none;line-height:14px}
+.sf-menu.dtr-main-nav>li.current-menu-item>a{opacity:.55}
+#dtr-header-global .fawas-wordmark{font-family:"Syne",system-ui,sans-serif;font-weight:800;font-size:28px;letter-spacing:-.04em;color:#fff}
+.fawas-case{padding-top:120px}
+@media (max-width:720px){
+  #dtr-header-global{display:none!important}
+  #dtr-responsive-header,#dtr-menu-button{display:block!important}
+  #dtr-header-global{padding:16px 20px!important}
+}
+</style>
 </head>
 <body class="home wp-singular page-template page-template-template-no-page-header page-template-template-no-page-header-php page page-id-9 wp-custom-logo wp-embed-responsive wp-theme-mellow dtr-header-v3 show-onscroll elementor-default elementor-kit-7 elementor-page elementor-page-9">
 <div id="dtr-wrapper" class="clearfix">
@@ -281,19 +313,19 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 	<div id="dtr-header-global" class="fixed-top">
     <div class="dtr-header-global-content">
         <div class="dtr-header-left">
-            <a class="dtr-logo logo-default" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">Fawas</span></a>
-            	<a class="dtr-logo logo-alt" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">Fawas</span></a>
+            <a class="dtr-logo logo-default" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">F</span></a>
+            	<a class="dtr-logo logo-alt" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">F</span></a>
         </div>
         <div class="dtr-header-right ms-auto">
                             <div class="main-navigation dtr-menu-default">
-                    <ul id="menu-primary-menu" class="dtr-nav sf-menu dtr-main-nav"><li class="menu-item"><a href="/">Home</a></li><li class="menu-item"><a href="/portfolio/">Portfolio</a></li><li class="menu-item"><a href="/about/">About</a></li><li class="menu-item"><a href="/contact/">Connect</a></li></ul>                </div>
+                    <ul id="menu-primary-menu" class="dtr-nav sf-menu dtr-main-nav"><li class="menu-item current-menu-item"><a href="/">Home</a></li><li class="menu-item"><a href="/about/">About</a></li><li class="menu-item"><a href="/portfolio/">Portfolio</a></li><li class="menu-item"><a href="/contact/">Contact</a></li></ul>                </div>
                     </div>
 
             </div>
 </div>
 <div id="dtr-responsive-header">
     <div class="container">
-        <a class="dtr-logo logo-default" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">Fawas</span></a>
+        <a class="dtr-logo logo-default" href="/" title="Muhammed Fawas"><span class="fawas-wordmark">F</span></a>
         <button id="dtr-menu-button" class="dtr-hamburger" type="button" aria-label="Menu Button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
     </div>
     <div class="dtr-responsive-header-menu"></div>
@@ -308,7 +340,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
       <h1>Building Organic Visibility That <em>Drives Results.</em></h1>
       <p>I'm <strong>Muhammed Fawas</strong>, an SEO Specialist based in Dubai, helping businesses grow through strategic SEO, organic visibility, and data-driven search strategies.</p>
       <div class="km-ctas">
-        <a class="km-btn km-btn-fill" href="https://wa.me/919072718780" target="_blank" rel="noopener">WhatsApp →</a>
+        <a class="km-btn km-btn-fill" href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp →</a>
         <a class="km-btn km-btn-ghost" href="#works">Explore work</a>
       </div>
       <div class="km-trust">
@@ -328,28 +360,30 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
     </div>
   </section>
 
+  <div class="km-ticker-shell">
   <div class="km-ticker" aria-label="Clients">
     <div class="km-ticker-label">Trusted by teams at</div>
     <div class="km-ticker-mask">
       <div class="km-ticker-track">
-        <img src="/wp-content/uploads/logos/dexito.webp" alt="dExito Branding" height="26">
-        <img src="/wp-content/uploads/logos/greenoasis.webp" alt="Green Oasis Travel" height="26">
-        <img src="/wp-content/uploads/logos/grandbake.webp" alt="Grand Bake" height="26">
-        <img src="/wp-content/uploads/logos/salman.webp" alt="Brand with Salman" height="26">
-        <img src="/wp-content/uploads/logos/crink.webp" alt="Crink.app" height="26">
-        <img src="/wp-content/uploads/logos/aurevo.webp" alt="Aurevo Interiors" height="26">
+        <img src="/wp-content/uploads/logos/dexito.webp?v=w1" alt="dExito Branding" height="26">
+        <img src="/wp-content/uploads/logos/greenoasis.webp?v=w1" alt="Green Oasis Travel" height="26">
+        <img src="/wp-content/uploads/logos/grandbake.webp?v=w1" alt="Grand Bake" height="26">
+        <img src="/wp-content/uploads/logos/salman.webp?v=w1" alt="Brand with Salman" height="26">
+        <img src="/wp-content/uploads/logos/crink.webp?v=w1" alt="Crink.app" height="26">
+        <img src="/wp-content/uploads/logos/aurevo.webp?v=w1" alt="Aurevo Interiors" height="26">
         <span class="km-word">ZAQRT</span>
-        <img src="/wp-content/uploads/logos/tawakkal.webp" alt="Al Tawakkal" height="26">
-        <img src="/wp-content/uploads/logos/dexito.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/greenoasis.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/grandbake.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/salman.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/crink.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/aurevo.webp" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/tawakkal.webp?v=w1" alt="Al Tawakkal" height="26">
+        <img src="/wp-content/uploads/logos/dexito.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/greenoasis.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/grandbake.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/salman.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/crink.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/aurevo.webp?v=w1" alt="" height="26" aria-hidden="true">
         <span class="km-word" aria-hidden="true">ZAQRT</span>
-        <img src="/wp-content/uploads/logos/tawakkal.webp" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/tawakkal.webp?v=w1" alt="" height="26" aria-hidden="true">
       </div>
     </div>
+  </div>
   </div>
 
   <section class="km-section" id="works">
@@ -400,7 +434,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
         <p>WordPress and custom sites with SEO-friendly structure, content, and performance.</p>
         <ul><li>WordPress builds</li><li>Wix to Astro migrations</li><li>On-page architecture</li><li>E-commerce structure</li></ul>
       </article>
-      <a class="km-svc km-svc-cta" href="/contact/">
+      <a class="km-svc km-svc-cta" href="https://wa.me/971528481743" target="_blank" rel="noopener">
         <div>
           <div class="km-svc-top"><span>Next</span><span class="km-ico">→</span></div>
           <h3>Got a project in mind?</h3>
@@ -415,7 +449,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
     <h2>Got a project that needs to rank?</h2>
     <p>Tell me what you're trying to grow. I'll tell you honestly whether I can help. No pitch decks.</p>
     <div class="km-ctas">
-      <a class="km-btn km-btn-fill" href="https://wa.me/919072718780" target="_blank" rel="noopener">WhatsApp directly</a>
+      <a class="km-btn km-btn-fill" href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp directly</a>
       <a class="km-btn km-btn-ghost" href="mailto:muhammedfawaas@gmail.com">muhammedfawaas@gmail.com</a>
     </div>
   </section>
@@ -439,21 +473,21 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
         <nav class="fawas-foot-nav" aria-label="Footer">
           <p class="fawas-foot-label">Pages</p>
           <a href="/">Home</a>
-          <a href="/portfolio/">Portfolio</a>
           <a href="/about/">About</a>
-          <a href="/contact/">Connect</a>
+          <a href="/portfolio/">Portfolio</a>
+          <a href="/contact/">Contact</a>
         </nav>
         <div class="fawas-foot-links">
           <p class="fawas-foot-label">Connect</p>
           <a href="mailto:muhammedfawaas@gmail.com">muhammedfawaas@gmail.com</a>
-          <a href="https://wa.me/919072718780" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp · +971 52 848 1743</a>
           <a href="https://www.linkedin.com/in/muhammed-fawas/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://x.com/muhammed_fawaas" target="_blank" rel="noopener">X</a>
         </div>
       </div>
       <div class="fawas-foot-bar">
         <span>© 2026 Muhammed Fawas</span>
-        <a href="/contact/">Start a conversation →</a>
+        <a href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp · +971 52 848 1743</a>
       </div>
     </div>
     <a id="take-to-top" href="#" class="show" aria-label="Scroll To Top"></a>
@@ -556,7 +590,7 @@ document.querySelectorAll("form.wpcf7-form").forEach(function (form) {
 });
 </script>
 
-<a class="fawas-wa" href="https://wa.me/919072718780" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="fawas-wa" href="https://wa.me/971528481743" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#111111" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </a>
 

@@ -91,13 +91,13 @@ export const site = {
   social: {
     linkedin: "https://www.linkedin.com/in/muhammed-fawas/",
     x: "https://x.com/muhammed_fawaas",
-    whatsapp: "https://wa.me/919072718780",
+    whatsapp: "https://wa.me/971528481743",
   },
   nav: [
     { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Portfolio" },
     { href: "/about", label: "About" },
-    { href: "/connect", label: "Connect" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/contact", label: "Contact" },
   ],
   seo: {
     home: {

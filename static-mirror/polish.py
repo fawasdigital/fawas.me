@@ -370,21 +370,7 @@ def write_project_pages() -> None:
             if next_p
             else "<span></span>"
         )
-        body = f"""<div class="dtr-page-title--section text-center">
-    <div class="dtr-page-title__overlay"></div>
-    <div class="container">
-        <div class="dtr-page-title__content">
-            <h1 class="dtr-page-title">{html.escape(p["title"])}</h1>
-        </div>
-        <div class="dtr-breadcrumb-wrapper">
-            <ul class="breadcrumbs">
-                <li class="home"><a href="/" title="Home">Home</a></li>
-                <li><a href="/#works">Work</a></li>
-                <li>{html.escape(p["title"])}</li>
-            </ul>
-        </div>
-    </div>
-</div>
+        body = f"""</header>
 <div id="dtr-main-wrapper" class="clearfix dtr-fullwidth">
 <main id="dtr-primary-section" class="dtr-content-area">
 <article class="fawas-case">
@@ -394,7 +380,7 @@ def write_project_pages() -> None:
 {paras}
 {imgs}
 <div class="fawas-case-nav">{prev_html}{next_html}</div>
-<p><a href="/#works">Back to work</a> · <a href="/contact/">Connect</a> · <a href="/muhammed-fawas-seo-specialist-resume.pdf">Download resume</a></p>
+<p><a href="/portfolio/">Back to work</a> · <a href="/contact/">Contact</a> · <a href="/muhammed-fawas-seo-specialist-resume.pdf">Download resume</a></p>
 </article>
 </main>
 </div>

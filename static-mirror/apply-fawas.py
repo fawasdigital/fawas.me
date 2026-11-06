@@ -39,17 +39,17 @@ img[src*="Figma"],img[src*="Illustrator"],img[src*="framer"],img[src*="html-"],i
 NAV = (
     '<ul id="menu-primary-menu" class="dtr-nav sf-menu dtr-main-nav">'
     '<li class="menu-item"><a href="/">Home</a></li>'
-    '<li class="menu-item"><a href="/#works">Work</a></li>'
-    '<li class="menu-item"><a href="/about-page/">About</a></li>'
-    '<li class="menu-item"><a href="/contact-page/">Connect</a></li>'
+    '<li class="menu-item"><a href="/about/">About</a></li>'
+    '<li class="menu-item"><a href="/portfolio/">Portfolio</a></li>'
+    '<li class="menu-item"><a href="/contact/">Contact</a></li>'
     "</ul>"
 )
 FOOTER_NAV = (
     '<ul id="menu-copyright-menu" class="menu">'
     '<li class="menu-item"><a href="/">Home</a></li>'
-    '<li class="menu-item"><a href="/#works">Work</a></li>'
-    '<li class="menu-item"><a href="/about-page/">About</a></li>'
-    '<li class="menu-item"><a href="/contact-page/">Connect</a></li>'
+    '<li class="menu-item"><a href="/about/">About</a></li>'
+    '<li class="menu-item"><a href="/portfolio/">Portfolio</a></li>'
+    '<li class="menu-item"><a href="/contact/">Contact</a></li>'
     "</ul>"
 )
 STUB = """
@@ -107,7 +107,7 @@ def link_feature_cards(html):
         if "+91" in block or "WhatsApp" in block:
             return block.replace(
                 'href="#"',
-                'href="https://wa.me/919072718780" target="_blank" rel="noopener"',
+                'href="https://wa.me/971528481743" target="_blank" rel="noopener"',
                 1,
             )
         if "muhammedfawaas@gmail.com" in block:
@@ -128,7 +128,7 @@ def apply_shared(html, path):
     html = replace_balanced(html, '<ul id="menu-copyright-menu"', FOOTER_NAV)
     html = re.sub(
         r'<a href="#contact" class="dtr-btn dtr-header-btn" target="_self">\s*<span class="dtr-btn__text">\s*Book a Call\s*</span>\s*</a>',
-        '<a href="https://wa.me/919072718780" class="dtr-btn dtr-header-btn" target="_blank" rel="noopener"><span class="dtr-btn__text">WhatsApp</span></a>',
+        '<a href="https://wa.me/971528481743" class="dtr-btn dtr-header-btn" target="_blank" rel="noopener"><span class="dtr-btn__text">WhatsApp</span></a>',
         html,
     )
     html = re.sub(
@@ -152,7 +152,7 @@ def apply_shared(html, path):
     html = html.replace('<span class="dtr-social-title">Twitter / X</span>', '<span class="dtr-social-title">X</span>')
     html = html.replace(
         '<a class="dtr-whatsapp" href="#" title="Whatsapp"  target="_blank" rel="nofollow" aria-label="Whatsapp">',
-        '<a class="dtr-whatsapp" href="https://wa.me/919072718780" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp">',
+        '<a class="dtr-whatsapp" href="https://wa.me/971528481743" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp">',
     )
     html = html.replace('<span class="dtr-social-title">Whatsapp</span>', '<span class="dtr-social-title">WhatsApp</span></a></li><li><a href="https://www.linkedin.com/in/muhammed-fawas/" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="dtr-social-title">LinkedIn</span>')
     if 'id="fawas-content"' not in html:
@@ -468,7 +468,7 @@ def apply_home(html):
     )
     channels = [
         ("/importance-of-search-engine-optimization-best-practices/", "mailto:muhammedfawaas@gmail.com", "Importance of search engine optimization best practices", "Email"),
-        ("/15-design-tips-that-always-deliver-growth/", "https://wa.me/919072718780", "15 design tips that always deliver growth", "WhatsApp"),
+        ("/15-design-tips-that-always-deliver-growth/", "https://wa.me/971528481743", "15 design tips that always deliver growth", "WhatsApp"),
         ("/the-value-proposition-business-branding/", "https://www.linkedin.com/in/muhammed-fawas/", "The value proposition business branding", "LinkedIn"),
         ("/essential-social-media-tips-for-small-business/", "https://x.com/muhammed_fawaas", "Essential social media tips for small business", "X"),
     ]

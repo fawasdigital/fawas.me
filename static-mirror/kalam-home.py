@@ -30,12 +30,13 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-visual-card picture{display:block;width:100%;height:auto;min-height:0}
 .km-visual-card img{width:100%;height:auto;min-height:0;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;display:block}
 .km-badge{position:absolute;top:18px;right:18px;z-index:2;background:#111;color:#fff;border:1px solid #333;border-radius:999px;padding:8px 14px;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
-.km-ticker{display:flex;align-items:center;gap:0;background:#0f0f0f;border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;padding:0 0 0 32px;overflow:hidden;min-height:78px}
-.km-ticker-label{position:relative;z-index:2;flex:0 0 auto;color:#7a7a7a;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:22px 28px 22px 0;background:#0f0f0f;box-shadow:18px 0 24px 10px #0f0f0f}
-.km-ticker-mask{flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 72px),transparent);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 72px),transparent)}
+.km-ticker-shell{max-width:1180px;margin:8px auto 0;padding:0 28px;box-sizing:border-box}
+.km-ticker{display:flex;align-items:center;gap:0;background:#0f0f0f;border:1px solid #1c1c1c;border-radius:16px;padding:0 20px 0 24px;overflow:hidden;min-height:72px;width:100%;box-sizing:border-box}
+.km-ticker-label{position:relative;z-index:2;flex:0 0 auto;color:#7a7a7a;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:18px 22px 18px 0;background:#0f0f0f;box-shadow:18px 0 24px 10px #0f0f0f}
+.km-ticker-mask{flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent)}
 .km-ticker-track{display:flex;align-items:center;width:max-content;gap:44px;padding:18px 0;animation:kmscroll 36s linear infinite}
 .km-ticker:hover .km-ticker-track{animation-play-state:paused}
-.km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.92}
+.km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.95;filter:brightness(0) invert(1)}
 .km-ticker-track .km-word{flex:0 0 auto;color:#fff;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
 @keyframes kmscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .km-section{max-width:1180px;margin:0 auto;padding:88px 28px}
@@ -85,6 +86,8 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
   .km-hero,.km-about,.km-services,.km-work{grid-template-columns:1fr}
   .km-visual{max-width:280px;margin:8px auto 0}
   .km-svc-cta{min-height:220px}
+  .km-ticker-shell{padding:0 20px}
+  .km-ticker-label{max-width:92px;line-height:1.35}
 }
 """
 
@@ -96,7 +99,7 @@ HOME = r"""
       <h1>Search-driven growth that <em>actually ranks.</em></h1>
       <p>I'm <strong>Muhammed Fawas</strong>, an SEO Specialist based between Kerala and Dubai. 2.5+ years helping businesses across India and the UAE improve search visibility, attract qualified traffic, and grow.</p>
       <div class="km-ctas">
-        <a class="km-btn km-btn-fill" href="https://wa.me/919072718780" target="_blank" rel="noopener">WhatsApp →</a>
+        <a class="km-btn km-btn-fill" href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp →</a>
         <a class="km-btn km-btn-ghost" href="#works">Explore work</a>
       </div>
       <div class="km-trust">
@@ -116,28 +119,30 @@ HOME = r"""
     </div>
   </section>
 
+  <div class="km-ticker-shell">
   <div class="km-ticker" aria-label="Clients">
     <div class="km-ticker-label">Trusted by teams at</div>
     <div class="km-ticker-mask">
       <div class="km-ticker-track">
-        <img src="/wp-content/uploads/logos/dexito.webp" alt="dExito Branding" height="26">
-        <img src="/wp-content/uploads/logos/greenoasis.webp" alt="Green Oasis Travel" height="26">
-        <img src="/wp-content/uploads/logos/grandbake.webp" alt="Grand Bake" height="26">
-        <img src="/wp-content/uploads/logos/salman.webp" alt="Brand with Salman" height="26">
-        <img src="/wp-content/uploads/logos/crink.webp" alt="Crink.app" height="26">
-        <img src="/wp-content/uploads/logos/aurevo.webp" alt="Aurevo Interiors" height="26">
+        <img src="/wp-content/uploads/logos/dexito.webp?v=w1" alt="dExito Branding" height="26">
+        <img src="/wp-content/uploads/logos/greenoasis.webp?v=w1" alt="Green Oasis Travel" height="26">
+        <img src="/wp-content/uploads/logos/grandbake.webp?v=w1" alt="Grand Bake" height="26">
+        <img src="/wp-content/uploads/logos/salman.webp?v=w1" alt="Brand with Salman" height="26">
+        <img src="/wp-content/uploads/logos/crink.webp?v=w1" alt="Crink.app" height="26">
+        <img src="/wp-content/uploads/logos/aurevo.webp?v=w1" alt="Aurevo Interiors" height="26">
         <span class="km-word">ZAQRT</span>
-        <img src="/wp-content/uploads/logos/tawakkal.webp" alt="Al Tawakkal" height="26">
-        <img src="/wp-content/uploads/logos/dexito.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/greenoasis.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/grandbake.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/salman.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/crink.webp" alt="" height="26" aria-hidden="true">
-        <img src="/wp-content/uploads/logos/aurevo.webp" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/tawakkal.webp?v=w1" alt="Al Tawakkal" height="26">
+        <img src="/wp-content/uploads/logos/dexito.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/greenoasis.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/grandbake.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/salman.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/crink.webp?v=w1" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/aurevo.webp?v=w1" alt="" height="26" aria-hidden="true">
         <span class="km-word" aria-hidden="true">ZAQRT</span>
-        <img src="/wp-content/uploads/logos/tawakkal.webp" alt="" height="26" aria-hidden="true">
+        <img src="/wp-content/uploads/logos/tawakkal.webp?v=w1" alt="" height="26" aria-hidden="true">
       </div>
     </div>
+  </div>
   </div>
 
   <section class="km-section" id="works">
@@ -228,7 +233,7 @@ HOME = r"""
     <h2>Got a project that needs to rank?</h2>
     <p>Tell me what you're trying to grow. I'll tell you honestly whether I can help. No pitch decks.</p>
     <div class="km-ctas">
-      <a class="km-btn km-btn-fill" href="https://wa.me/919072718780" target="_blank" rel="noopener">WhatsApp directly</a>
+      <a class="km-btn km-btn-fill" href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp directly</a>
       <a class="km-btn km-btn-ghost" href="mailto:muhammedfawaas@gmail.com">muhammedfawaas@gmail.com</a>
     </div>
   </section>
