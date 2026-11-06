@@ -99,7 +99,7 @@ HOME = r"""
       <h1>Search-driven growth that <em>actually ranks.</em></h1>
       <p>I'm <strong>Muhammed Fawas</strong>, an SEO Specialist based between Kerala and Dubai. 2.5+ years helping businesses across India and the UAE improve search visibility, attract qualified traffic, and grow.</p>
       <div class="km-ctas">
-        <a class="km-btn km-btn-fill" href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp →</a>
+        <a class="km-btn km-btn-fill" href="/contact/">Contact now</a>
         <a class="km-btn km-btn-ghost" href="#works">Explore work</a>
       </div>
       <div class="km-trust">
@@ -115,7 +115,6 @@ HOME = r"""
           <img src="/wp-content/uploads/fawas-exec.jpg" alt="Muhammed Fawas, SEO Specialist" width="795" height="1105" fetchpriority="high" decoding="async">
         </picture>
       </div>
-      <span class="km-badge">Immediate joiner</span>
     </div>
   </section>
 
