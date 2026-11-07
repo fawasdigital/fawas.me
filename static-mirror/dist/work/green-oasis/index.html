@@ -135,6 +135,25 @@ img[src*="Figma"],img[src*="Illustrator"],img[src*="framer"],img[src*="html-"],i
 .fawas-stat-card span{color:#8a8a8a;font-size:13px}
 .fawas-case-nav{display:flex;justify-content:space-between;gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid #1c1c1c;font-size:15px}
 .fawas-case-nav span{color:#555}
+.fawas-ai{margin:8px 0 12px}
+.fawas-ai h2,.fawas-proof h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
+.fawas-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.fawas-chip{display:inline-block;border:1px solid #333;border-radius:999px;padding:6px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#cfcfcf}
+.fawas-ranks{margin:8px 0 32px}
+.fawas-ranks h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
+.fawas-ranks-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #222;border-radius:16px;overflow:hidden;background:#111}
+.fawas-ranks table{width:100%;border-collapse:collapse;margin:0;font-size:14px}
+.fawas-ranks th,.fawas-ranks td{padding:11px 16px;border-bottom:1px solid #1c1c1c;text-align:left;vertical-align:top}
+.fawas-ranks th{color:#8a8a8a;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#141414}
+.fawas-ranks td{color:#ddd;line-height:1.4}
+.fawas-ranks td.rank,.fawas-ranks td.num{width:72px;color:#fff;font-weight:700;letter-spacing:-.02em;text-align:right}
+.fawas-ranks td.vol{width:88px;color:#aaa;text-align:right}
+.fawas-ranks tr:last-child td{border-bottom:0}
+.fawas-ranks .col + .col{border-left:1px solid #222}
+.fawas-ranks.single .fawas-ranks-grid{grid-template-columns:1fr}
+.fawas-ranks .kw-url{display:block;color:#777;font-size:12px;margin-top:3px}
+@media (max-width:720px){.fawas-stats,.fawas-ranks-grid{grid-template-columns:1fr}.fawas-ranks .col + .col{border-left:0;border-top:1px solid #222}}
+
 .fawas-ranks{margin:8px 0 32px}
 .fawas-ranks h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
 .fawas-ranks-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #222;border-radius:16px;overflow:hidden;background:#111}
@@ -264,17 +283,14 @@ img[src*="Figma"],img[src*="Illustrator"],img[src*="framer"],img[src*="html-"],i
 <main id="dtr-primary-section" class="dtr-content-area">
 <article class="fawas-case">
 <p class="meta">Travel SEO · <a href="https://greenoasistravel.com" target="_blank" rel="noopener">greenoasistravel.com</a><br>Travel &amp; tourism · Kerala, India · 12 months</p>
-<p>With the launch of an SEO-optimized website and a focused growth strategy, Green Oasis recorded 11.6K organic clicks and 813K organic impressions within one year.</p>
-<div class="fawas-stats"><div class="fawas-stat-card"><b>11.6K</b><span>Organic clicks</span></div><div class="fawas-stat-card"><b>813K</b><span>Impressions</span></div><div class="fawas-stat-card"><b>500+</b><span>Qualified leads</span></div></div>
-<p>Service pages, travel packages, and informational blogs emerged as key traffic drivers, generating 500+ qualified leads.</p><p>Core service queries such as travel agency in Kerala, Turkey packages from Kerala, and international tour packages ranked in the top results.</p>
+<p>With the launch of an SEO-optimized website and a focused growth strategy, Green Oasis recorded 11.6K organic clicks and 813K organic impressions within one year.</p><div class="fawas-stats"><div class="fawas-stat-card"><b>11.6K</b><span>Organic clicks</span></div><div class="fawas-stat-card"><b>813K</b><span>Impressions</span></div><div class="fawas-stat-card"><b>500+</b><span>Qualified leads</span></div></div><p>Service pages, travel packages, and informational blogs were the main traffic drivers, generating 500+ qualified leads.</p><p>Core queries such as travel agency in Kerala, Turkey packages from Kerala, and international tour packages ranked in the top results.</p>
 <div class="fawas-ranks">
   <h2>Ranking status</h2>
   <div class="fawas-ranks-grid">
     <div class="col"><table><thead><tr><th>Keyword</th><th class="vol">Search volume</th><th class="rank">Ranking status</th></tr></thead><tbody><tr><td>Travel agency in Kerala</td><td class="vol">5000</td><td class="rank">1</td></tr><tr><td>Tours and travels in Kerala</td><td class="vol">5000</td><td class="rank">1</td></tr><tr><td>Hajj packages from Kerala</td><td class="vol">50</td><td class="rank">1</td></tr><tr><td>Turkey tour packages from Kerala</td><td class="vol">500</td><td class="rank">2</td></tr><tr><td>Turkey packages from Kerala</td><td class="vol">50</td><td class="rank">2</td></tr><tr><td>Turkey trip from Kerala</td><td class="vol">50</td><td class="rank">2</td></tr><tr><td>Europe tour from Kerala</td><td class="vol">50</td><td class="rank">2</td></tr><tr><td>Europe packages from Kerala</td><td class="vol">500</td><td class="rank">2</td></tr><tr><td>International tour packages from Kerala</td><td class="vol">500</td><td class="rank">3</td></tr><tr><td>International packages from Kerala</td><td class="vol">500</td><td class="rank">3</td></tr><tr><td>Azerbaijan package from Kerala</td><td class="vol">500</td><td class="rank">3</td></tr></tbody></table></div>
     <div class="col"><table><thead><tr><th>Keyword</th><th class="vol">Search volume</th><th class="rank">Ranking status</th></tr></thead><tbody><tr><td>Vietnam tour from Kerala</td><td class="vol">50</td><td class="rank">3</td></tr><tr><td>Umrah packages from Kerala</td><td class="vol">5000</td><td class="rank">3</td></tr><tr><td>Kerala Umrah package</td><td class="vol">50</td><td class="rank">3</td></tr><tr><td>Vietnam package from Kerala</td><td class="vol">500</td><td class="rank">4</td></tr><tr><td>Azerbaijan tour package from Kerala</td><td class="vol">500</td><td class="rank">4</td></tr><tr><td>Malaysia tour package from Kerala</td><td class="vol">5000</td><td class="rank">4</td></tr><tr><td>Europe tour packages from Kerala</td><td class="vol">5000</td><td class="rank">5</td></tr><tr><td>Vietnam tour package from Kerala</td><td class="vol">500</td><td class="rank">5</td></tr><tr><td>Malaysia package from Kerala</td><td class="vol">5000</td><td class="rank">5</td></tr><tr><td>Tour operators in Kerala</td><td class="vol">5000</td><td class="rank">5</td></tr><tr><td>Malaysia trip package from Kerala</td><td class="vol">5000</td><td class="rank">5</td></tr><tr><td>Azerbaijan trip package from Kerala</td><td class="vol">5000</td><td class="rank">5</td></tr></tbody></table></div>
   </div>
-</div>
-<img src="/wp-content/uploads/work/green-oasis.jpg" alt="Green Oasis Travel" /><img src="/wp-content/uploads/work/green-oasis-2.jpg" alt="Green Oasis Travel" />
+</div><div class="fawas-ai"><h2>GEO &amp; AI search visibility</h2><div class="fawas-chips"><span class="fawas-chip">Google AI Overview</span><span class="fawas-chip">ChatGPT</span><span class="fawas-chip">Perplexity</span><span class="fawas-chip">Claude</span><span class="fawas-chip">Google Gemini</span></div></div><div class="fawas-proof"><h2>Proof</h2></div><img src="/wp-content/uploads/work/green-oasis.jpg" alt="Green Oasis Search Console" /><img src="/wp-content/uploads/work/green-oasis-traffic.jpg" alt="Green Oasis organic traffic" /><img src="/wp-content/uploads/work/green-oasis-ai.jpg" alt="Green Oasis GEO and AI search visibility" />
 <div class="fawas-case-nav"><a href="/work/brand-with-salman/">← Brand with Salman</a><a href="/work/grand-bake/">Grand Bake →</a></div>
 <p><a href="/portfolio/">Back to work</a> · <a href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp</a> · <a href="/muhammed-fawas-seo-specialist-resume.pdf">Download resume</a></p>
 </article>

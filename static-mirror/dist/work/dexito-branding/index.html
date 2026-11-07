@@ -135,7 +135,37 @@ img[src*="Figma"],img[src*="Illustrator"],img[src*="framer"],img[src*="html-"],i
 .fawas-stat-card span{color:#8a8a8a;font-size:13px}
 .fawas-case-nav{display:flex;justify-content:space-between;gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid #1c1c1c;font-size:15px}
 .fawas-case-nav span{color:#555}
-@media (max-width:720px){.fawas-stats{grid-template-columns:1fr}}
+.fawas-ai{margin:8px 0 12px}
+.fawas-ai h2,.fawas-proof h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
+.fawas-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.fawas-chip{display:inline-block;border:1px solid #333;border-radius:999px;padding:6px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#cfcfcf}
+.fawas-ranks{margin:8px 0 32px}
+.fawas-ranks h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
+.fawas-ranks-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #222;border-radius:16px;overflow:hidden;background:#111}
+.fawas-ranks table{width:100%;border-collapse:collapse;margin:0;font-size:14px}
+.fawas-ranks th,.fawas-ranks td{padding:11px 16px;border-bottom:1px solid #1c1c1c;text-align:left;vertical-align:top}
+.fawas-ranks th{color:#8a8a8a;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#141414}
+.fawas-ranks td{color:#ddd;line-height:1.4}
+.fawas-ranks td.rank,.fawas-ranks td.num{width:72px;color:#fff;font-weight:700;letter-spacing:-.02em;text-align:right}
+.fawas-ranks td.vol{width:88px;color:#aaa;text-align:right}
+.fawas-ranks tr:last-child td{border-bottom:0}
+.fawas-ranks .col + .col{border-left:1px solid #222}
+.fawas-ranks.single .fawas-ranks-grid{grid-template-columns:1fr}
+.fawas-ranks .kw-url{display:block;color:#777;font-size:12px;margin-top:3px}
+@media (max-width:720px){.fawas-stats,.fawas-ranks-grid{grid-template-columns:1fr}.fawas-ranks .col + .col{border-left:0;border-top:1px solid #222}}
+
+.fawas-ranks{margin:8px 0 32px}
+.fawas-ranks h2{margin:28px 0 16px;font-size:1.5rem;letter-spacing:-.03em;color:#fff;text-transform:none}
+.fawas-ranks-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #222;border-radius:16px;overflow:hidden;background:#111}
+.fawas-ranks table{width:100%;border-collapse:collapse;margin:0;font-size:14px}
+.fawas-ranks th,.fawas-ranks td{padding:11px 16px;border-bottom:1px solid #1c1c1c;text-align:left;vertical-align:top}
+.fawas-ranks th{color:#8a8a8a;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#141414}
+.fawas-ranks td{color:#ddd;line-height:1.4}
+.fawas-ranks td.rank,.fawas-ranks td.num{width:72px;color:#fff;font-weight:700;letter-spacing:-.02em;text-align:right}
+.fawas-ranks tr:last-child td{border-bottom:0}
+.fawas-ranks .col + .col{border-left:1px solid #222}
+.fawas-ranks .kw-url{display:block;color:#777;font-size:12px;margin-top:3px}
+@media (max-width:720px){.fawas-stats,.fawas-ranks-grid{grid-template-columns:1fr}.fawas-ranks .col + .col{border-left:0;border-top:1px solid #222}}
 </style>
 <style id="fawas-foot">
 #dtr-footer-section.fawas-foot{background:#0b0b0b;border-top:1px solid #1c1c1c;padding:0;margin:0}
@@ -250,11 +280,32 @@ img[src*="Figma"],img[src*="Illustrator"],img[src*="framer"],img[src*="html-"],i
 <main id="dtr-primary-section" class="dtr-content-area">
 <article class="fawas-case">
 <p class="meta">Agency SEO · <a href="https://dexitobranding.com" target="_blank" rel="noopener">dexitobranding.com</a><br>Digital marketing · Kerala, India · 1.5 years</p>
-<p>The SEO-optimized website scaled from 145 clicks and 998 impressions to 21.7K clicks and 1.38M impressions in 1.5 years.</p>
-<div class="fawas-stats"><div class="fawas-stat-card"><b>145 → 21.7K</b><span>Organic clicks</span></div><div class="fawas-stat-card"><b>998 → 1.38M</b><span>Impressions</span></div><div class="fawas-stat-card"><b>1.5 yrs</b><span>SEO program</span></div></div>
-<p>Core service pages, strategic content, and targeted SEO optimization were the primary traffic drivers.</p><p>The work strengthened search rankings, user engagement, and the agency&#x27;s position in the Kerala market.</p>
-<img src="/wp-content/uploads/work/dexito.jpg" alt="dExito Branding" /><img src="/wp-content/uploads/work/dexito-2.jpg" alt="dExito Branding" />
-<div class="fawas-case-nav"><a href="/work/grand-bake/">← Grand Bake</a><a href="/work/aurevo-interiors/">Aurevo Interiors →</a></div>
+<p>With an SEO-optimized website and a focused performance strategy, dExito Branding scaled from 145 clicks and 998 impressions to 21.7K clicks and 1.38M impressions in 1.5 years.</p><div class="fawas-stats"><div class="fawas-stat-card"><b>145 → 21.7K</b><span>Organic clicks</span></div><div class="fawas-stat-card"><b>998 → 1.38M</b><span>Impressions</span></div><div class="fawas-stat-card"><b>1.5 yrs</b><span>SEO program</span></div></div><p>Core service pages, strategic content, and targeted SEO were the primary traffic drivers, improving rankings and engagement in the Kerala market.</p>
+<div class="fawas-ranks">
+  <h2>Ranking status</h2>
+  <div class="fawas-ranks-grid">
+    <div class="col">
+      <table>
+        <thead><tr><th>Keywords</th><th class="rank">Ranking status</th></tr></thead>
+        <tbody>
+          <tr><td>Branding agency in Kerala<span class="kw-url">dexitobranding.com/branding-agency-in-kerala</span></td><td class="rank">1</td></tr>
+          <tr><td>Lead generation agency in Kerala<span class="kw-url">dexitobranding.com/lead-generation-agency-in-kerala</span></td><td class="rank">1</td></tr>
+          <tr><td>Communication strategy agency in Kerala<span class="kw-url">dexitobranding.com/communication-strategy-agency-in-kerala</span></td><td class="rank">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <table>
+        <thead><tr><th>Keywords</th><th class="rank">Ranking status</th></tr></thead>
+        <tbody>
+          <tr><td>Performance marketing agency in Kerala<span class="kw-url">dexitobranding.com/performance-marketing-agency-in-kerala</span></td><td class="rank">1</td></tr>
+          <tr><td>SEO agency in Kerala<span class="kw-url">dexitobranding.com/seo-company-in-kerala</span></td><td class="rank">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><div class="fawas-proof"><h2>Proof</h2></div><img src="/wp-content/uploads/work/dexito.jpg" alt="dExito Branding Search Console" /><img src="/wp-content/uploads/work/dexito-traffic.jpg" alt="dExito Branding organic traffic" /><img src="/wp-content/uploads/work/dexito-serps.jpg" alt="dExito Branding ranking status" />
+<div class="fawas-case-nav"><a href="/work/al-tawakkal/">← Al Tawakkal</a><a href="/work/crink-app/">Crink.app →</a></div>
 <p><a href="/portfolio/">Back to work</a> · <a href="https://wa.me/971528481743" target="_blank" rel="noopener">WhatsApp</a> · <a href="/muhammed-fawas-seo-specialist-resume.pdf">Download resume</a></p>
 </article>
 </main>

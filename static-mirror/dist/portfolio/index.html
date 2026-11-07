@@ -187,11 +187,23 @@ body.page-portfolio .dtr-heading,body.page-portfolio h1,body.page-portfolio h2,b
 .km-chip{display:inline-block;background:#111;border:1px solid #333;border-radius:999px;padding:5px 10px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
 .km-work-card h3{margin:0 0 10px;font-size:1.7rem;line-height:1.15;letter-spacing:-.03em;color:#fff}
 .km-work-card p{margin:0;color:#c6c6c6;font-size:.98rem;line-height:1.5}
+.km-sites-head{margin:0 0 22px}
+.km-sites-head h2{margin:0 0 8px;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.04em}
+.km-sites-head p{margin:0;color:#b3b3b3;max-width:560px;line-height:1.6}
+.km-sites{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.km-site{display:flex;flex-direction:column;background:#141414;border:1px solid #222;border-radius:22px;overflow:hidden;color:inherit}
+.km-site img{width:100%;height:220px;object-fit:cover;object-position:top center;display:block;opacity:1}
+.km-site .copy{padding:22px 22px 24px}
+.km-site-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.km-site-meta .km-chip{margin:0}
+.km-site h3{margin:0 0 8px;font-size:1.35rem;letter-spacing:-.03em;color:#fff}
+.km-site p{margin:0 0 14px;color:#b8b8b8;font-size:.98rem;line-height:1.5}
+.km-site-url{color:#fff;font-size:13px;border-bottom:1px solid #444;padding-bottom:2px}
 .ab-cta{max-width:1080px;margin:56px auto 96px;padding:40px 36px;border:1px solid #222;border-radius:24px;background:#121212;display:flex;justify-content:space-between;align-items:center;gap:28px}
 .ab-cta h2{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;letter-spacing:-.04em}
 .ab-cta p{margin:0;color:#b3b3b3;max-width:420px}
 @media (max-width:900px){
-  .ab-hero,.ab-cta,.km-work{grid-template-columns:1fr}
+  .ab-hero,.ab-cta,.km-work,.km-sites{grid-template-columns:1fr}
   .ab-hero{padding-top:112px;gap:28px}
   .ab-cta{align-items:flex-start;flex-direction:column}
 }
@@ -343,7 +355,7 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
       <h1>All projects.</h1>
     </div>
     <div class="ab-copy">
-      <p>SEO, web, and migrations from India, the UAE, and Saudi Arabia. Nine case studies with Search Console numbers from the work itself.</p>
+      <p>SEO, web, and migrations from India, the UAE, Saudi Arabia, and the GCC. Ten case studies with ranking tables, Search Console, and GEO/AI proof from the work itself.</p>
       <p>Open a project for the full write-up, screenshots, and what changed.</p>
     </div>
   </section>
@@ -351,7 +363,7 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
     <div class="km-work pf-grid">
       <a class="km-work-card" href="/work/brand-with-salman/">
         <img src="/wp-content/uploads/work/brand-with-salman.jpg" alt="Brand with Salman">
-        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Brand with Salman</h3><p>201 → 2.57K organic clicks and 303 → 378K impressions over 1.5 years.</p></div>
+        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Brand with Salman</h3><p>201 → 2.57K organic clicks, 303 → 378K impressions, and 100+ inbound leads over 1.5 years.</p></div>
       </a>
       <a class="km-work-card" href="/work/green-oasis/">
         <img src="/wp-content/uploads/work/green-oasis.jpg" alt="Green Oasis Travel">
@@ -361,9 +373,25 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
         <img src="/wp-content/uploads/work/grand-bake.jpg" alt="Grand Bake">
         <div class="copy"><span class="km-chip">E-commerce SEO</span><h3>Grand Bake</h3><p>6.86K clicks, 268 organic orders, and AED 47,585+ in revenue.</p></div>
       </a>
+      <a class="km-work-card" href="/work/ameen-ahsan/">
+        <img src="/wp-content/uploads/work/ameen-ahsan.jpg" alt="Ameen Ahsan">
+        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Ameen Ahsan</h3><p>54 → 158 clicks and 1.19K → 2.61K impressions in three months in Dubai.</p></div>
+      </a>
+      <a class="km-work-card" href="/work/al-tawakkal/">
+        <img src="/wp-content/uploads/work/al-tawakkal.jpg" alt="Al Tawakkal">
+        <div class="copy"><span class="km-chip">SEO consulting</span><h3>Al Tawakkal</h3><p>Organic clicks 8.11K → 12.9K (+59.1%) and impressions 1.12M → 1.35M in three months.</p></div>
+      </a>
       <a class="km-work-card" href="/work/dexito-branding/">
         <img src="/wp-content/uploads/work/dexito.jpg" alt="dExito Branding">
-        <div class="copy"><span class="km-chip">Agency SEO</span><h3>dExito Branding</h3><p>145 → 21.7K clicks and 998 → 1.38M impressions in 1.5 years.</p></div>
+        <div class="copy"><span class="km-chip">Agency SEO</span><h3>dExito Branding</h3><p>145 → 21.7K organic clicks and 998 → 1.38M impressions in 1.5 years — Search Console proof.</p></div>
+      </a>
+      <a class="km-work-card" href="/work/crink-app/">
+        <img src="/wp-content/uploads/work/crink.jpg" alt="Crink.app">
+        <div class="copy"><span class="km-chip">Healthcare SEO</span><h3>Crink.app</h3><p>Technical SEO, Wix to Astro migration, and GEO/AI visibility in a YMYL category.</p></div>
+      </a>
+      <a class="km-work-card" href="/work/sabiz-fragrances/">
+        <img src="/wp-content/uploads/work/sabiz-stripe-checkout.jpg" alt="Sabiz Fragrances Stripe checkout">
+        <div class="copy"><span class="km-chip">E-commerce</span><h3>Sabiz Fragrances</h3><p>Stripe international payment gateway for a perfume store covering UAE, GCC, and India.</p></div>
       </a>
       <a class="km-work-card" href="/work/aurevo-interiors/">
         <img src="/wp-content/uploads/work/aurevo.jpg" alt="Aurevo Interiors">
@@ -372,18 +400,6 @@ body.page-about .dtr-heading,body.page-about h1,body.page-about h2,body.page-abo
       <a class="km-work-card" href="/work/zaqrt/">
         <img src="/wp-content/uploads/work/zaqrt.jpg" alt="ZAQRT">
         <div class="copy"><span class="km-chip">E-commerce migration</span><h3>ZAQRT</h3><p>WordPress to custom-built e-commerce migration for a Saudi retail site.</p></div>
-      </a>
-      <a class="km-work-card" href="/work/al-tawakkal/">
-        <img src="/wp-content/uploads/work/al-tawakkal.jpg" alt="Al Tawakkal">
-        <div class="copy"><span class="km-chip">SEO consulting</span><h3>Al Tawakkal</h3><p>Organic clicks 8.11K → 12.9K (+59.1%) and impressions 1.12M → 1.35M in three months.</p></div>
-      </a>
-      <a class="km-work-card" href="/work/crink-app/">
-        <img src="/wp-content/uploads/work/crink.jpg" alt="Crink.app">
-        <div class="copy"><span class="km-chip">Healthcare SEO</span><h3>Crink.app</h3><p>Technical SEO, Wix to Astro migration, and organic growth in a YMYL category.</p></div>
-      </a>
-      <a class="km-work-card" href="/work/ameen-ahsan/">
-        <img src="/wp-content/uploads/work/ameen-ahsan.jpg" alt="Ameen Ahsan">
-        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Ameen Ahsan</h3><p>54 → 158 clicks and 1.19K → 2.61K impressions in three months in Dubai.</p></div>
       </a>
     </div>
   </section>

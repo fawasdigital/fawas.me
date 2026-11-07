@@ -216,6 +216,15 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-work-card h3{margin:0 0 10px;font-size:1.7rem;line-height:1.15;letter-spacing:-.03em;color:#fff}
 .km-work-card p{margin:0;color:#c6c6c6;font-size:.98rem;line-height:1.5}
 .km-more{display:inline-block;margin-top:22px;color:#fff;border-bottom:1px solid #444;padding-bottom:2px}
+.km-sites{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.km-site{display:flex;flex-direction:column;background:#141414;border:1px solid #222;border-radius:22px;overflow:hidden;color:inherit}
+.km-site img{width:100%;height:220px;object-fit:cover;object-position:top center;display:block;opacity:1}
+.km-site .copy{padding:22px 22px 24px}
+.km-site-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.km-site-meta .km-chip{margin:0}
+.km-site h3{margin:0 0 8px;font-size:1.35rem;letter-spacing:-.03em;color:#fff}
+.km-site p{margin:0 0 14px;color:#b8b8b8;font-size:.98rem;line-height:1.5}
+.km-site-url{color:#fff;font-size:13px;border-bottom:1px solid #444;padding-bottom:2px}
 .km-services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .km-svc{background:#141414;border:1px solid #222;border-radius:22px;padding:26px 22px;min-height:280px}
 .km-svc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;color:#888;font-size:12px;letter-spacing:.08em}
@@ -246,7 +255,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-cta h2{margin:0 0 12px;font-size:clamp(2rem,4vw,3rem);color:#fff}
 .km-cta p{margin:0 0 24px;color:#b3b3b3;max-width:560px}
 @media (max-width:980px){
-  .km-hero,.km-about,.km-services,.km-work{grid-template-columns:1fr}
+  .km-hero,.km-about,.km-services,.km-work,.km-sites{grid-template-columns:1fr}
   .km-visual{max-width:280px;margin:8px auto 0}
   .km-svc-cta{min-height:220px}
   .km-ticker-shell{padding:0 20px}
@@ -425,7 +434,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
     <div class="km-work">
       <a class="km-work-card" href="/work/brand-with-salman/">
         <img src="/wp-content/uploads/work/brand-with-salman.jpg" alt="Brand with Salman">
-        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Brand with Salman</h3><p>201 → 2.57K organic clicks and 303 → 378K impressions over 1.5 years.</p></div>
+        <div class="copy"><span class="km-chip">Personal branding SEO</span><h3>Brand with Salman</h3><p>201 → 2.57K organic clicks, 303 → 378K impressions, and 100+ inbound leads over 1.5 years.</p></div>
       </a>
       <a class="km-work-card" href="/work/green-oasis/">
         <img src="/wp-content/uploads/work/green-oasis.jpg" alt="Green Oasis Travel">
@@ -437,7 +446,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
       </a>
       <a class="km-work-card" href="/work/dexito-branding/">
         <img src="/wp-content/uploads/work/dexito.jpg" alt="dExito Branding">
-        <div class="copy"><span class="km-chip">Agency SEO</span><h3>dExito Branding</h3><p>145 → 21.7K clicks and 998 → 1.38M impressions in 1.5 years.</p></div>
+        <div class="copy"><span class="km-chip">Agency SEO</span><h3>dExito Branding</h3><p>145 → 21.7K organic clicks and 998 → 1.38M impressions in 1.5 years — Search Console proof.</p></div>
       </a>
     </div>
     <a class="km-more" href="/portfolio/">See all projects →</a>
