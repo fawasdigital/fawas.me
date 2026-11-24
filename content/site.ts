@@ -35,6 +35,14 @@ export const site = {
   ],
   experience: [
     {
+      role: "Freelance Digital Marketer",
+      org: "Independent",
+      dates: "Jul 2023 – Present",
+      place: "",
+      mode: "Hybrid",
+      points: [],
+    },
+    {
       role: "SEO Specialist",
       org: "Crink Private Limited",
       dates: "Apr 2026 – Jun 2026",

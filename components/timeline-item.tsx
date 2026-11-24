@@ -15,13 +15,15 @@ export function TimelineItem({ item }: { item: Experience }) {
           <h3 className="font-display text-2xl tracking-tight">{item.role}</h3>
           <p className="mt-1 text-lg">{item.org}</p>
           <p className="mt-2 text-sm text-muted">
-            {item.place} · {item.mode}
+            {[item.place, item.mode].filter(Boolean).join(" · ")}
           </p>
-          <ul className="mt-3 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted">
-            {item.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
+          {item.points.length > 0 ? (
+            <ul className="mt-3 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted">
+              {item.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </div>
       </Reveal>
