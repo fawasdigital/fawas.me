@@ -4,5 +4,9 @@ Disallow: /blog/
 Disallow: /tag/
 Disallow: /category/
 Disallow: /author/
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /contact-page/
+Disallow: /poortfolio/
 
 Sitemap: https://fawas.me/sitemap.xml
