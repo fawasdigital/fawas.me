@@ -41,7 +41,17 @@ export function personJsonLd() {
     jobTitle: site.role,
     url: site.url,
     email: site.email,
+    telephone: site.phone,
     description: site.home.intro,
+    knowsAbout: site.skills.flatMap((group) => [...group.items]),
+    hasCredential: site.certifications.map((name) => ({
+      "@type": "EducationalOccupationalCredential",
+      name,
+    })),
+    alumniOf: site.education.map((item) => ({
+      "@type": "EducationalOrganization",
+      name: item.org,
+    })),
     sameAs: [site.social.linkedin, site.social.x],
     workLocation: [
       {
@@ -87,6 +97,7 @@ export function contactPageJsonLd() {
       name: site.name,
       url: site.url,
       email: site.email,
+      telephone: site.phone,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Al Qusais, Dubai",

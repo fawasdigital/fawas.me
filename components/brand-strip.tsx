@@ -5,9 +5,9 @@ export function BrandStrip() {
   return (
     <section aria-label={site.ui.brands} className="border-t border-line">
       <Reveal>
-        <ul className="mx-auto grid w-full max-w-[1200px] grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+        <ul className="mx-auto grid w-full max-w-[1200px] grid-cols-2 border-line sm:grid-cols-3 lg:grid-cols-5">
           {site.brands.map((brand) => (
-            <li key={brand} className="border-line border-r border-b px-4 py-8 xl:border-b-0">
+            <li key={brand} className="border-r border-b border-line px-4 py-8">
               <p className="text-center font-display text-sm tracking-tight text-balance text-muted">
                 {brand}
               </p>

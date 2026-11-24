@@ -1,3 +1,4 @@
+import { CaseStudies } from "@/components/case-studies";
 import { ClientGrid } from "@/components/client-grid";
 import { JsonLd } from "@/components/json-ld";
 import { Section } from "@/components/section";
@@ -35,13 +36,11 @@ export default function WorkPage() {
               <TimelineItem key={`${item.org}-${item.dates}`} item={item} />
             ))}
           </ol>
+          <h2 className="mt-20 font-display text-3xl tracking-tight md:text-4xl">{site.ui.selectedWork}</h2>
+          <CaseStudies />
           <h2 className="mt-20 font-display text-3xl tracking-tight md:text-4xl">{site.ui.clients}</h2>
           <div className="mt-8">
             <ClientGrid />
-          </div>
-          {/* TODO: case-study cards. Real projects only — no placeholder metrics, quotes, or logos. */}
-          <div className="mt-16 rounded-2xl border border-dashed border-white/15 px-6 py-10">
-            <p className="font-mono text-sm text-accent">{site.caseStudyTodo}</p>
           </div>
         </Section>
       </div>

@@ -17,6 +17,11 @@ export function TimelineItem({ item }: { item: Experience }) {
           <p className="mt-2 text-sm text-muted">
             {item.place} · {item.mode}
           </p>
+          <ul className="mt-3 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted">
+            {item.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
       </Reveal>

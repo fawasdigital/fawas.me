@@ -4,11 +4,12 @@ import { JsonLd } from "@/components/json-ld";
 import { LocationCard } from "@/components/location-card";
 import { MagneticButton } from "@/components/magnetic-button";
 import { Section } from "@/components/section";
-import { mailto, site } from "@/content/site";
+import { mailto, site, tel } from "@/content/site";
 import { breadcrumbJsonLd, contactPageJsonLd, pageMeta } from "@/lib/seo";
 
 const channels = [
   { href: mailto(), label: "Email" },
+  { href: tel(), label: site.ui.call },
   { href: site.social.whatsapp, label: "WhatsApp" },
   { href: site.social.linkedin, label: "LinkedIn" },
   { href: site.social.x, label: "X" },
