@@ -93,6 +93,11 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
   .km-ticker-shell{padding:0 20px}
   .km-ticker-label{max-width:92px;line-height:1.35}
 }
+@media (max-width:600px){
+  .km-hero .km-ctas{flex-wrap:nowrap;gap:6px}
+  .km-hero .km-btn{flex:0 1 auto;white-space:nowrap;padding:12px 9px;font-size:13px}
+}
+
 """
 
 HOME = r"""
