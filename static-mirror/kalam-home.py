@@ -113,7 +113,7 @@ HOME = r"""
       </div>
       <div class="km-trust">
         <div><b>2.5+</b><span>Years of SEO</span></div>
-        <div><b>20+</b><span>Websites managed</span></div>
+        <div><b>100+</b><span>Websites Audited</span></div>
         <div><b>30+</b><span>Clients</span></div>
       </div>
     </div>
@@ -282,7 +282,7 @@ HOME = r"""
         <p class="km-lede" style="margin-bottom:0">I'm an SEO Specialist with 2.5+ years of experience driving organic growth for businesses across India and the UAE. Technical SEO, on-page and off-page, local SEO, AEO, GEO, AI search, and WordPress development.</p>
         <div class="km-stats">
           <div class="km-stat"><b>2.5+</b><span>Years of SEO</span></div>
-          <div class="km-stat"><b>20+</b><span>Websites managed</span></div>
+          <div class="km-stat"><b>100+</b><span>Websites Audited</span></div>
           <div class="km-stat"><b>15+</b><span>GBPs optimized</span></div>
         </div>
         <div class="km-caps">
