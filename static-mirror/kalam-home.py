@@ -104,12 +104,12 @@ HOME = r"""
       <p>I'm <strong>Muhammed Fawas</strong>, an SEO Specialist based between Kerala and Dubai. 2.5+ years helping businesses across India and the UAE improve search visibility, attract qualified traffic, and grow.</p>
       <div class="km-ctas">
         <a class="km-btn km-btn-fill" href="/contact/">Contact now</a>
-        <a class="km-btn km-btn-ghost" href="#works">Explore work</a>
+        <a class="km-btn km-btn-ghost" href="/contact/">Get Free SEO Audit</a>
       </div>
       <div class="km-trust">
         <div><b>2.5+</b><span>Years of SEO</span></div>
         <div><b>20+</b><span>Websites managed</span></div>
-        <div><b>15+</b><span>Google Business Profiles</span></div>
+        <div><b>30+</b><span>Clients</span></div>
       </div>
     </div>
     <div class="km-visual">
