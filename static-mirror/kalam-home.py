@@ -38,6 +38,8 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-ticker:hover .km-ticker-track{animation-play-state:paused}
 .km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.95;filter:brightness(0) invert(1)}
 .km-ticker-track .km-word{flex:0 0 auto;color:#fff;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.km-ticker-track .km-cert{flex:0 0 auto;display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700;letter-spacing:.04em;opacity:.95}
+.km-ticker-track .km-cert img{height:24px}
 @keyframes kmscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .km-section{max-width:1180px;margin:0 auto;padding:88px 28px}
 .km-kicker{margin:0 0 14px;color:#9a9a9a;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
@@ -168,6 +170,48 @@ HOME = r"""
     </div>
     <a class="km-more" href="/work/aurevo-interiors/">More work: Aurevo, ZAQRT, Al Tawakkal, Crink.app, Ameen Ahsan →</a>
   </section>
+
+  <div class="km-ticker-shell">
+  <div class="km-ticker" aria-label="Certifications">
+    <div class="km-ticker-label">Certified by</div>
+    <div class="km-ticker-mask">
+      <div class="km-ticker-track">
+        <span class="km-cert"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="Google" height="24">Google</span>
+        <span class="km-cert"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="HubSpot" height="24">HubSpot</span>
+        <span class="km-cert"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="Semrush" height="24">Semrush</span>
+        <span class="km-cert"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="Ahrefs" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/google.svg?v=c1" alt="" height="24">Google</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/hubspot.svg?v=c1" alt="" height="24">HubSpot</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/semrush.svg?v=c1" alt="" height="24">Semrush</span>
+        <span class="km-cert" aria-hidden="true"><img src="/wp-content/uploads/logos/certs/ahrefs.svg?v=c1" alt="" height="24">Ahrefs</span>
+      </div>
+    </div>
+  </div>
+  </div>
 
   <section class="km-section" id="services">
     <p class="km-kicker">Services · What I do</p>
