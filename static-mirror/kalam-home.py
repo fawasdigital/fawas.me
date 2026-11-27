@@ -35,6 +35,7 @@ body.home .dtr-heading,body.home h1,body.home h2,body.home h3{text-transform:non
 .km-ticker-label{position:relative;z-index:2;flex:0 0 auto;color:#7a7a7a;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:18px 22px 18px 0;background:#0f0f0f;box-shadow:18px 0 24px 10px #0f0f0f}
 .km-ticker-mask{flex:1;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 36px),transparent)}
 .km-ticker-track{display:flex;align-items:center;width:max-content;gap:44px;padding:18px 0;animation:kmscroll 36s linear infinite}
+.km-ticker[aria-label="Certifications"] .km-ticker-track{animation-duration:140s}
 .km-ticker:hover .km-ticker-track{animation-play-state:paused}
 .km-ticker-track img{height:26px;width:auto;flex:0 0 auto;display:block;opacity:.95;filter:brightness(0) invert(1)}
 .km-ticker-track .km-word{flex:0 0 auto;color:#fff;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
